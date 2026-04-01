@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.layout {
+  @apply px-4 md:px-20 lg:px-30 xl:px-45 2xl:px-80;
+}
