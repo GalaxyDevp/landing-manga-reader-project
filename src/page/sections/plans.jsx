@@ -1,6 +1,6 @@
-import Card from "../../../components/card";
-import checkIcon from "../../../assets/icons/check.svg";
-
+import Card from "../../components/card";
+import checkIcon from "../../assets/icons/check.jsx";
+import StarIcon from "../../assets/icons/star.jsx";
 const Plans = () => {
   const plansList = [
     {
@@ -49,10 +49,10 @@ const Plans = () => {
   ];
   return (
     <section className="bg-pink-50/60">
-      <div className="layout py-22 flex flex-col justify-center items-center">
-        <div className="flex flex-col items-center text-center">
+      <div className="layout py-22 flex flex-col justify-center items-center dark:bg-gray-900/90 dark:text-white">
+        <div className="flex flex-col items-center text-center tracking-wide">
           <h1 className="text-[40px] font-semibold">Choose your plan</h1>
-          <p className="text-[20px] text-gray-500">
+          <p className="text-[20px] text-gray-500 dark:text-gray-300">
             Start with a 14-day free trial. No credit card required. Cancel
             anytime.
           </p>
@@ -63,14 +63,17 @@ const Plans = () => {
               <Card
                 className={
                   plan.popular
-                    ? "border-4 border-violet-600 transform md:scale-105"
-                    : ""
+                    ? "border-4 border-violet-600 transform md:scale-105 dark:border-violet-500"
+                    : "dark:border-gray-700 dark:border-1"
                 }
               >
                 <div key={plan.name}>
                   {plan.popular && (
-                    <div className="bg-violet-600 text-white px-3 py-1 rounded-full w-fit">
-                      <span className="text-[14px]">Most Popular</span>
+                    <div className="bg-violet-600 text-white px-3 py-1 rounded-full w-fit dark:bg-violet-500">
+                      <p className="text-[14px] flex items-center gap-2">
+                        <StarIcon fill="white" width={18} height={18} />
+                        Most Popular
+                      </p>
                     </div>
                   )}
                   <h2 className="text-[26px]">{plan.name}</h2>
@@ -83,7 +86,13 @@ const Plans = () => {
                   </p>
                   <div className="py-6">
                     <button
-                      className={`${plan.popular ? "bg-violet-600 text-white" : "border-2 border-violet-600 text-violet-600"} px-4 py-3 rounded-lg w-full`}
+                      className={`transition 
+                      ${
+                        plan.popular
+                          ? "bg-violet-600 text-white hover:bg-violet-800"
+                          : "border-2 border-violet-600 text-violet-600 hover:bg-violet-600 hover:text-white dark:border-violet-500 dark:text-violet-500 dark:hover:bg-violet-600 dark:hover:border-violet-600"
+                      } 
+                      px-4 py-3 rounded-lg w-full font-semibold`}
                     >
                       {plan.buttonText}
                     </button>
@@ -101,7 +110,7 @@ const Plans = () => {
             </div>
           ))}
         </div>
-        <p className="text-[14px] text-gray-500 text-center">
+        <p className="text-[14px] text-gray-500 dark:text-gray-300 text-center">
           All plans include a 14-day money-back guarantee. Promotion valid for
           new users only. <a href="#">See terms</a>
         </p>

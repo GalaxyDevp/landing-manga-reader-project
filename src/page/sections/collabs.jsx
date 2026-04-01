@@ -1,4 +1,4 @@
-import notion from "../../../assets/notion.png";
+import notion from "../../assets/notion.png";
 const Collabs = () => {
   return (
     <section className="my-18 flex flex-col items-center justify-center gap-6">

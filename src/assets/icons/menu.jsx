@@ -1,0 +1,26 @@
+const MenuIcon = ({
+  color = "white",
+  width = 24,
+  height = 24,
+  fill = "none",
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill={fill}
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide lucide-menu-icon lucide-menu"
+    >
+      <path d="M4 5h16" />
+      <path d="M4 12h16" />
+      <path d="M4 19h16" />
+    </svg>
+  );
+};
+export default MenuIcon;

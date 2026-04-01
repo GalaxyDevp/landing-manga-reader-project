@@ -1,9 +1,10 @@
-import Hero from "./sections/Hero/hero";
-import Collabs from "./sections/collabs/collabs";
-import Features from "./sections/features/features";
+import Hero from "./sections/hero";
+import Features from "./sections/features";
+import Plans from "./sections/plans";
+import Reviews from "./sections/reviews";
 import NavBar from "../components/navbar";
-import Plans from "./sections/plans/plans";
-import Reviews from "./sections/reviews/reviews";
+import CTA from "./sections/cta";
+import Footer from "./sections/footer";
 
 const Home = () => {
   return (
@@ -13,6 +14,8 @@ const Home = () => {
       <Features />
       <Plans />
       <Reviews />
+      <CTA />
+      <Footer />
     </div>
   );
 };

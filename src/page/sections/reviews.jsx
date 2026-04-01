@@ -1,7 +1,8 @@
-import Card from "../../../components/card";
-import user1 from "../../../assets/profiles/an-shiraishi-icon.webp";
-import user2 from "../../../assets/profiles/mozu-icon.webp";
-import user3 from "../../../assets/profiles/ouri-sakaguchi-icon.webp";
+import Card from "../../components/card";
+import user1 from "../../assets/profiles/an-shiraishi-icon.webp";
+import user2 from "../../assets/profiles/mozu-icon.webp";
+import user3 from "../../assets/profiles/ouri-sakaguchi-icon.webp";
+import StarIcon from "../../assets/icons/star.jsx";
 
 const Reviews = () => {
   const users = [
@@ -32,12 +33,12 @@ const Reviews = () => {
   ];
   return (
     <section>
-      <div className="layout py-22 flex flex-col items-center justify-center">
-        <div className="pt-6 pb-12 text-center">
-          <h1 className="text-[40px] font-semibold">
+      <div className="layout py-22 flex flex-col items-center justify-center dark:bg-gray-900 dark:text-white">
+        <div className="pt-6 pb-12 text-center tracking-wide">
+          <h1 className="text-[40px] font-semibold ">
             Loved by manga readers worldwide
           </h1>
-          <p className="text-[20px] text-gray-500">
+          <p className="text-[20px] text-gray-500 dark:text-gray-300">
             Join millions of readers who trust us for their daily manga fix.
           </p>
         </div>
@@ -45,9 +46,24 @@ const Reviews = () => {
         <div className="grid grid-cols-12 gap-4">
           {users.map((user) => (
             <div className="col-span-12 md:col-span-4">
-              <Card key={user.name} bgColor="bg-gray-50">
-                <div className="flex flex-col gap-2">
-                  <p className="pb-4 text-pretty">"{user.review}"</p>
+              <Card
+                key={user.name}
+                bgColor="bg-gray-50"
+                className="dark:border-gray-700 dark:border-1"
+              >
+                <article className="flex flex-col gap-2">
+                  <div className="flex gap-2">
+                    {Array.from({ length: user.ranking }).map((_, index) => (
+                      <StarIcon
+                        key={index}
+                        fill="#FFD333"
+                        color="#FFD333"
+                        width={22}
+                        height={22}
+                      />
+                    ))}
+                  </div>
+                  <p className="pb-4 text-pretty ">"{user.review}"</p>
                   <div className="flex gap-2">
                     <img
                       src={user.image}
@@ -56,10 +72,12 @@ const Reviews = () => {
                     />
                     <div>
                       <p>{user.name}</p>
-                      <p className="text-sm text-gray-600">{user.role}</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
+                        {user.role}
+                      </p>
                     </div>
                   </div>
-                </div>
+                </article>
               </Card>
             </div>
           ))}
