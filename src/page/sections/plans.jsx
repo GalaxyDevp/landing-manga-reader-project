@@ -1,8 +1,12 @@
 import Card from "../../components/card";
 import checkIcon from "../../assets/icons/check.jsx";
 import StarIcon from "../../assets/icons/star.jsx";
-import { Link } from "react-router";
+import { useNavigate } from "react-router";
 const Plans = () => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/register");
+  };
   const plansList = [
     {
       name: "Free",
@@ -50,7 +54,7 @@ const Plans = () => {
   ];
   return (
     <section id="plans" className="bg-pink-50/60 scroll-mt-5">
-      <div className="layout py-22 flex flex-col justify-center items-center dark:bg-gray-900/90 dark:text-white">
+      <div className="layout py-12 2xl:py-22 flex flex-col justify-center items-center dark:bg-gray-900/90 dark:text-white">
         <div className="flex flex-col items-center text-center tracking-wide">
           <h1 className="text-[40px] font-semibold">Choose your plan</h1>
           <p className="text-[20px] text-gray-500 dark:text-gray-300">
@@ -94,8 +98,9 @@ const Plans = () => {
                           : "border-2 border-violet-600 text-violet-600 hover:bg-violet-600 hover:text-white dark:border-violet-500 dark:text-violet-500 dark:hover:bg-violet-600 dark:hover:border-violet-600"
                       } 
                       px-4 py-3 rounded-lg w-full font-semibold`}
+                      onClick={handleNavigate}
                     >
-                      <Link to="/register">{plan.buttonText}</Link>
+                      {plan.buttonText}
                     </button>
                   </div>
                   <ul className="">
