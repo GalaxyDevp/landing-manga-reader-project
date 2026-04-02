@@ -1,4 +1,4 @@
-import Card from "../../components/card";
+import { Link } from "react-router";
 import HeroImg from "../../components/heroImg";
 
 const Hero = () => {
@@ -18,7 +18,7 @@ const Hero = () => {
           </div>
           <div className="flex justify-start gap-x-8 tracking-wide">
             <button className="transition text-white rounded-xl py-3 px-8 bg-violet-600 hover:bg-violet-800 font-semibold">
-              Try free trial
+              <Link to="/register">Try free trial</Link>
             </button>
             <a
               href="#plans"

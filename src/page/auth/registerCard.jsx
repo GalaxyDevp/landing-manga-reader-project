@@ -13,7 +13,7 @@ const RegisterCard = () => {
         <h1 className="text-[28px] font-semibold text-center">
           Create your account
         </h1>
-        <p className="text-center">start your manga journey today</p>
+        <p className="text-center">Start your manga journey today</p>
         <div>
           <form
             action=""

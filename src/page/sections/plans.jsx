@@ -1,6 +1,7 @@
 import Card from "../../components/card";
 import checkIcon from "../../assets/icons/check.jsx";
 import StarIcon from "../../assets/icons/star.jsx";
+import { Link } from "react-router";
 const Plans = () => {
   const plansList = [
     {
@@ -94,7 +95,7 @@ const Plans = () => {
                       } 
                       px-4 py-3 rounded-lg w-full font-semibold`}
                     >
-                      {plan.buttonText}
+                      <Link to="/register">{plan.buttonText}</Link>
                     </button>
                   </div>
                   <ul className="">

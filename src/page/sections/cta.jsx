@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const CTA = () => {
   return (
     <section>
@@ -14,7 +16,7 @@ const CTA = () => {
           </div>
           <div className="flex justify-center items-center gap-4 tracking-wide py-8">
             <button className="bg-white font-semibold py-3 px-8 rounded-xl text-violet-600 dark:text-violet-400 dark:bg-gray-900 dark:hover:bg-gray-800">
-              Start Free trial
+              <Link to="/register">Start Free trial</Link>
             </button>
             <a
               href="#plans"
