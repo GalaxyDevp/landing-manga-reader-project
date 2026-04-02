@@ -65,7 +65,7 @@ const Features = () => {
             >
               <Card
                 bgColor="bg-gray-50 hover:bg-violet-50"
-                className="flex flex-col gap-2 dark:text-white dark:hover:bg-gray-700 dark:border-gray-700 dark:border-1"
+                className="flex flex-col gap-2 dark:text-white dark:hover:bg-gray-700 dark:border-gray-700 dark:border-1 w-full h-full"
               >
                 <div className="bg-violet-600 rounded-lg p-2 w-fit">
                   {feature.icon}

@@ -61,11 +61,11 @@ const Plans = () => {
           {plansList.map((plan) => (
             <div className="col-span-12 md:col-span-4">
               <Card
-                className={
+                className={`w-full h-full
                   plan.popular
                     ? "border-4 border-violet-600 transform md:scale-105 dark:border-violet-500"
                     : "dark:border-gray-700 dark:border-1"
-                }
+                `}
               >
                 <div key={plan.name}>
                   {plan.popular && (

@@ -49,7 +49,7 @@ const Reviews = () => {
               <Card
                 key={user.name}
                 bgColor="bg-gray-50"
-                className="dark:border-gray-700 dark:border-1"
+                className="dark:border-gray-700 dark:border-1 w-full h-full"
               >
                 <article className="flex flex-col gap-2">
                   <div className="flex gap-2">

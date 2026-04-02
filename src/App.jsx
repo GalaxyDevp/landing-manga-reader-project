@@ -1,11 +1,17 @@
 import "./App.css";
+import Register from "./page/auth/register";
 import Home from "./page/home";
+
 import ThemeProvider from "./provider/themeProvider";
+import Navbar from "./components/navbar";
+import SignIn from "./page/auth/signIn";
 
 function App() {
+  //install router dom
   return (
     <ThemeProvider>
-      <Home />
+      <Navbar />
+      <Register />
     </ThemeProvider>
   );
 }

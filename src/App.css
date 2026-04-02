@@ -4,3 +4,8 @@
 .layout {
   @apply px-4 md:px-20 lg:px-30 xl:px-45 2xl:px-80;
 }
+
+.background-gradient {
+  @apply bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50 transition-colors duration-300;
+}
+
