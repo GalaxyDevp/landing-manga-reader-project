@@ -16,9 +16,12 @@ const CTA = () => {
             <button className="bg-white font-semibold py-3 px-8 rounded-xl text-violet-600 dark:text-violet-400 dark:bg-gray-900 dark:hover:bg-gray-800">
               Start Free trial
             </button>
-            <button className="border border-2 border-white font-semibold hover:border-violet-600 py-3 px-8 rounded-xl transition hover:bg-violet-600 hover:text-white">
+            <a
+              href="#plans"
+              className="border border-2 border-white font-semibold hover:border-violet-600 py-3 px-8 rounded-xl transition hover:bg-violet-600 hover:text-white"
+            >
               View All Plans
-            </button>
+            </a>
           </div>
           <div className="">
             <p className="text-center text-[14px] font-light">

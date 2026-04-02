@@ -1,8 +1,9 @@
 import Card from "../../components/card";
+import HeroImg from "../../components/heroImg";
 
 const Hero = () => {
   return (
-    <section className="bg-violet-50 py-12 md:py-10 lg:pt-10 xl:pt-10 lg:pb-28 2xl:pb-50 dark:bg-gray-900/90">
+    <section className="bg-violet-50 py-12 md:py-10 lg:pt-10 xl:pt-10 lg:pb-28 2xl:pb-40 dark:bg-gray-900/90">
       <div className="grid grid-cols-12 pt-16 layout">
         <div className="col-span-12 md:col-span-7 xl:col-span-6 lg:pt-10 2xl:pt-20">
           <div className="tracking-wide">
@@ -19,9 +20,12 @@ const Hero = () => {
             <button className="transition text-white rounded-xl py-3 px-8 bg-violet-600 hover:bg-violet-800 font-semibold">
               Try free trial
             </button>
-            <button className="transition flex py-3 px-8 gap-2 items-center justify-center rounded-xl font-semibold border-2 border-violet-600 text-violet-600 hover:bg-violet-600 hover:text-white dark:border-violet-500 dark:text-violet-500 dark:hover:bg-violet-600 dark:hover:border-violet-600">
+            <a
+              href="#plans"
+              className="transition flex py-3 px-8 gap-2 items-center justify-center rounded-xl font-semibold border-2 border-violet-600 text-violet-600 hover:bg-violet-600 hover:text-white dark:border-violet-500 dark:text-violet-500 dark:hover:bg-violet-600 dark:hover:border-violet-600"
+            >
               View Plans
-            </button>
+            </a>
           </div>
           <div className="flex flex-row items-center gap-4 pt-12 dark:text-white tracking-wide">
             <p className="flex flex-col">
@@ -35,7 +39,9 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <div className="col-span-12 md:col-span-5 xl:col-span-6  border"></div>
+        <div className="pt-10 md:pt-0 col-span-12 md:col-span-5 xl:col-span-6 place-self-center">
+          <HeroImg />
+        </div>
       </div>
     </section>
   );

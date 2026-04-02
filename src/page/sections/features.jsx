@@ -47,7 +47,7 @@ const Features = () => {
   ];
   return (
     <section>
-      <div className="layout py-12 md:py-10 lg:py-34 2xl:py-44 dark:bg-gray-900">
+      <div className="layout py-12 md:py-10 lg:py-34 2xl:py-40 dark:bg-gray-900">
         <div className="pb-20 2xl:pb-26 tracking-wide dark:text-white">
           <h1 className="text-[34px] font-bold text-balance text-center">
             Everything you need to enjoy read manga

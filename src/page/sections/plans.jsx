@@ -48,7 +48,7 @@ const Plans = () => {
     },
   ];
   return (
-    <section className="bg-pink-50/60">
+    <section id="plans" className="bg-pink-50/60 scroll-mt-5">
       <div className="layout py-22 flex flex-col justify-center items-center dark:bg-gray-900/90 dark:text-white">
         <div className="flex flex-col items-center text-center tracking-wide">
           <h1 className="text-[40px] font-semibold">Choose your plan</h1>
